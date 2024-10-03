@@ -5,6 +5,7 @@
     "ts-jest": "^29.2.5"
   },
   "scripts": {
-    "test": "jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles",
+    "test:cov": "jest --coverage"
   }
 }

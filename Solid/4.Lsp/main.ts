@@ -8,29 +8,29 @@
  * Happy coding! 🚀
  */
 
-// interface Machine {
-//     print(document: string): void;
-//     scan(document: string): void;
-//     fax(document: string): void;
-// }
+interface Machine {
+    print(document: string): void;
+    scan(document: string): void;
+    fax(document: string): void;
+}
 
-// class OldFashionedPrinter implements Machine {
-//     print(document: string): void {
-//         console.log(`Printing document: ${document}`);
-//     }
+class OldFashionedPrinter implements Machine {
+    print(document: string): void {
+        console.log(`Printing document: ${document}`);
+    }
 
-//     scan(document: string): void {
-//         throw new Error("Scan not supported");
-//     }
+    scan(document: string): void {
+        throw new Error("Scan not supported");
+    }
 
-//     fax(document: string): void {
-//         throw new Error("Fax not supported");
-//     }
-// }
+    fax(document: string): void {
+        throw new Error("Fax not supported");
+    }
+}
 
-// const printer = new OldFashionedPrinter();
-// printer.print("Document 1");
+const printer = new OldFashionedPrinter();
+printer.print("Document 1");
 
-// printer.scan("Document 2"); // Lỗi: Scan not supported
-// printer.fax("Document 3");  // Lỗi: Fax not supported
+printer.scan("Document 2"); // Lỗi: Scan not supported
+printer.fax("Document 3");  // Lỗi: Fax not supported
 
