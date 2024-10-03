@@ -9,63 +9,42 @@
  */
 
 /*=========== START PRACTICE 1 ===============*/
-// class Shape {
-//     shapes: Shape[];
-//     constructor(shapes: Shape[]) {
-//         this.shapes = shapes;
-//     }
-
-//     calculateArea(): number {
-//         let total = 0;
-//         this.shapes.forEach((shape) => {
-//             if (shape instanceof Circle) {
-//                 total += Math.PI * Math.pow(shape.radius, 2);
-//             }
-//             if (shape instanceof Rectangle) {
-//                 total += shape.height * shape.width;
-//             }
-//             if (shape instanceof Triangle) {
-//                 total += 0.5 * shape.length * shape.length;
-//             }
-//         });
-//         return total;
-//     }
-// }
-
-// class Circle extends Shape {
-//     radius: number;
-//     constructor(radius: number) {
-//         super([]);
-//         this.radius = radius;
-//     }
-// }
-
-// class Rectangle extends Shape {
-//     height: number
-//     width: number
-//     constructor(height: number, width: number) {
-//         super([]);
-//         this.height = height;
-//         this.width = width;
-
-//     }
-// }
-// class Triangle extends Shape {
-//     length: number
-//     constructor(length: number) {
-//         super([]);
-//         this.length = length;
-//     }
-// }
 
 
-// let shapes: Shape[] = [
-//     new Circle(5),
-//     new Rectangle(4, 5),
-//     new Triangle(3)
-// ];
-// const shapesInstance = new Shape(shapes);
-// console.log(shapesInstance.calculateArea());
+class Circle extends Shape {
+    radius: number;
+    constructor(radius: number) {
+        super([]);
+        this.radius = radius;
+    }
+}
+
+class Rectangle extends Shape {
+    height: number
+    width: number
+    constructor(height: number, width: number) {
+        super([]);
+        this.height = height;
+        this.width = width;
+
+    }
+}
+class Triangle extends Shape {
+    length: number
+    constructor(length: number) {
+        super([]);
+        this.length = length;
+    }
+}
+
+
+let shapes: Shape[] = [
+    new Circle(5),
+    new Rectangle(4, 5),
+    new Triangle(3)
+];
+const shapesInstance = new Shape(shapes);
+console.log(shapesInstance.calculateArea());
 /*=========== END PRACTICE 1 ===============*/
 
 
