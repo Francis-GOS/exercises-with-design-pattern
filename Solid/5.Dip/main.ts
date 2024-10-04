@@ -8,23 +8,32 @@
  * Happy coding! 🚀
  */
 
-// class EmailService {
-//     sendEmail(message: string): void {
-//         console.log(`Sending email with message: ${message}`);
-//     }
-// }
+// Define an interface for the email service
+interface IEmailService {
+    sendEmail(message: string): void;
+}
 
-// class SendNotification {
-//     private emailService: EmailService;
+// Implement the email service
+class EmailService implements IEmailService {
+    sendEmail(message: string): void {
+        console.log(`Sending email with message: ${message}`);
+    }
+}
 
-//     constructor() {
-//         this.emailService = new EmailService();
-//     }
+// Update the SendNotification class to depend on the abstraction (IEmailService)
+class SendNotification {
+    private emailService: IEmailService;
 
-//     sendNotification(message: string): void {
-//         this.emailService.sendEmail(message);
-//     }
-// }
+    constructor(emailService: IEmailService) {
+        this.emailService = emailService;
+    }
 
-// const notification = new SendNotification();
-// notification.sendNotification("Hello, this is a notification!");
+    sendNotification(message: string): void {
+        this.emailService.sendEmail(message);
+    }
+}
+
+// Create an instance of the email service and pass it to the SendNotification class
+const emailService = new EmailService();
+const notification = new SendNotification(emailService);
+notification.sendNotification("Hello, this is a notification!");
